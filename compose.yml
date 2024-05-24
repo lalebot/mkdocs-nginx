@@ -1,13 +1,20 @@
 
 services:
-  mkdocs-nginx:
+  mkdocs:
     build: .
-    container_name: mkdocs-nginx
+    container_name: mkdocs
+    volumes:
+      - ./mkdocs:/app/mkdocs
+    depends_on:
+      - nginx
+    restart: unless-stopped
+  
+  nginx:
+    container_name: nginx
+    image: nginx:stable-alpine3.17-slim
     ports:
       - "8080:80"
     volumes:
-      - ./mkdocs:/app/mkdocs
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./.htpasswd:/etc/nginx/.htpasswd
-      - ./logs:/app/logs
     restart: unless-stopped

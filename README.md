@@ -9,9 +9,6 @@ This repository contains a MkDocs (material theme) configured to run with Nginx 
 ```
 ├── compose.yml
 ├── Dockerfile
-├── entrypoint.sh
-├── logs
-│   └──log
 ├── mkdocs
 │   ├── docs
 │   │   ├── img
@@ -23,8 +20,7 @@ This repository contains a MkDocs (material theme) configured to run with Nginx 
 ├── poetry.lock
 ├── poetry.toml
 ├── pyproject.toml
-├── README.md
-└── supervisord.conf
+└── README.md
 ```
 
 - mkdocs: Directory containing the MkDocs documentation files.
@@ -32,7 +28,6 @@ This repository contains a MkDocs (material theme) configured to run with Nginx 
 - nginx.conf: Nginx configuration file.
 - .htpasswd: File containing the usernames and passwords for basic authentication.
 - docker-compose.yml: Docker Compose file to manage Docker containers.
-- logs: supervisor logs.
 
 ## Prerequisites
 

@@ -3,24 +3,14 @@ FROM python:3.9.19-slim-bookworm
 
 WORKDIR /app
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y nginx --no-install-recommends && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir poetry==1.8.3
 
-RUN pip install --upgrade pip && pip install poetry==1.8.3
 COPY ./poetry.lock \
     ./pyproject.toml \
     ./
 RUN poetry config virtualenvs.create false && \
     poetry install --only main --no-interaction --no-ansi
 
-COPY entrypoint.sh \
-    supervisord.conf \
-    ./
-
-#EXPOSE 80
-
-CMD ["/bin/sh", "/app/entrypoint.sh"]
+CMD ["mkdocs", "serve", "-a", "0.0.0.0:8080", "-f", "/app/mkdocs/mkdocs.yml"]
 
