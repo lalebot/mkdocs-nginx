@@ -27,15 +27,15 @@ This repository contains a MkDocs (material theme) configured to run with Nginx 
 └── supervisord.conf
 ```
 
-    mkdocs: Directory containing the MkDocs documentation files.
-    Dockerfile: Dockerfile to build the MkDocs project.
-    nginx.conf: Nginx configuration file.
-    .htpasswd: File containing the usernames and passwords for basic authentication.
-    docker-compose.yml: Docker Compose file to manage Docker containers.
+- mkdocs: Directory containing the MkDocs documentation files.
+- Dockerfile: Dockerfile to build the MkDocs project.
+- nginx.conf: Nginx configuration file.
+- .htpasswd: File containing the usernames and passwords for basic authentication.
+- docker-compose.yml: Docker Compose file to manage Docker containers.
 
 ## Prerequisites
 
-    - Docker installed on your machine.
+- Docker installed on your machine.
 
 ## Create the .htpasswd file:
 
@@ -43,10 +43,10 @@ You can use the htpasswd utility to create this file:
 
 
 ```bash
-    htpasswd -c .htpasswd username
+htpasswd -c .htpasswd username
 ```
 
-    Follow the prompts to set the password for username.
+Follow the prompts to set the password for username.
 
 ## Running the Project
 
@@ -60,13 +60,13 @@ docker-compose up -d
 
 ### MkDocs Configuration:
 
-    Edit the mkdocs.yml file to customize your MkDocs site.
+Edit the mkdocs.yml file to customize your MkDocs site.
 
 ### Nginx Configuration:
 
-    Edit the nginx.conf file to customize the Nginx setup.
+Edit the nginx.conf file to customize the Nginx setup.
 
 ### htpasswd:
 
-    Use the htpasswd utility to manage users and passwords in the .htpasswd file.
+Use the htpasswd utility to manage users and passwords in the .htpasswd file.
 
