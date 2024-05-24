@@ -1,0 +1,13 @@
+
+services:
+  mkdocs-nginx:
+    build: .
+    container_name: mkdocs-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./mkdocs:/app/mkdocs
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./.htpasswd:/etc/nginx/.htpasswd
+      - ./logs:/app/logs
+    restart: unless-stopped

@@ -1,0 +1,19 @@
+site_name: Documentation
+
+nav:
+  - Home: index.md
+  - Others: others.md
+
+theme: 
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  # features:
+  #   - navigation.tabs
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+plugins:
+  - glightbox
