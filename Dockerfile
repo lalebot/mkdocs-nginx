@@ -9,9 +9,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt 
-
 RUN pip install poetry==1.8.3
 COPY ./poetry.lock \
     ./pyproject.toml \
