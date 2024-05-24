@@ -32,6 +32,7 @@ This repository contains a MkDocs (material theme) configured to run with Nginx 
 - nginx.conf: Nginx configuration file.
 - .htpasswd: File containing the usernames and passwords for basic authentication.
 - docker-compose.yml: Docker Compose file to manage Docker containers.
+- logs: supervisor logs.
 
 ## Prerequisites
 
