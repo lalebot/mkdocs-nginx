@@ -1,10 +1,10 @@
 
-# MkDocs with Nginx, htpasswd, and Docker
+# 📑 MkDocs with Nginx, htpasswd, and Docker
 
 This repository contains a MkDocs (material theme) configured to run with Nginx and basic authentication (htpasswd) using Docker.
 
 
-# Project Structure
+# 📂 Project Structure
 
 ```
 ├── compose.yml
@@ -29,11 +29,11 @@ This repository contains a MkDocs (material theme) configured to run with Nginx 
 - .htpasswd: File containing the usernames and passwords for basic authentication.
 - docker-compose.yml: Docker Compose file to manage Docker containers.
 
-## Prerequisites
+## 🛠️ Prerequisites
 
 - Docker installed on your machine.
 
-## Create the .htpasswd file:
+## 🔐 Create the .htpasswd file:
 
 You can use the htpasswd utility to create this file:
 
@@ -44,7 +44,7 @@ htpasswd -c .htpasswd username
 
 Follow the prompts to set the password for username.
 
-## Running the Project
+## ▶️ Running the Project
 
 To start the MkDocs site with Nginx and basic authentication, run:
 
@@ -52,7 +52,7 @@ To start the MkDocs site with Nginx and basic authentication, run:
 docker-compose up -d
 ```
 
-## Customization
+## ⚙️ Customization
 
 ### MkDocs Configuration:
 
