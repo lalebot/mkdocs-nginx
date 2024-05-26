@@ -12,7 +12,7 @@ This repository contains a MkDocs (material theme) configured to run with Nginx 
 ├── mkdocs
 │   ├── docs
 │   │   ├── img
-│   │   │   └── zelda-dark-world.png
+│   │   │   └── image.png
 │   │   ├── index.md
 │   │   └── others.md
 │   └── mkdocs.yml
